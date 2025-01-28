@@ -4,7 +4,7 @@ import { schema } from "./schema";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { defaultValues, IContactUs } from "./ContactUs.config";
-import { StyledFullWidth, StyledGridForm } from "./COntactUs.style";
+import { StyledFullWidth, StyledGridForm } from "./ContactUs.style";
 import TextAreaElement from "./element/TextAreaFieldElement";
 import { StyledBtn } from "../../theme/Components";
 

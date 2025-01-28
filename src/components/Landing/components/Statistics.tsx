@@ -5,7 +5,14 @@ import { StyledStatText, StyledStatValue } from "../Landing.style";
 const StyledStatistics = styled.div`
   display: flex;
   justify-content: center;
-  gap: ${pxToRem(160)};
+  gap: ${pxToRem(180)};
+`;
+
+const StyledStatisticCard = styled.div`
+  max-width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const Statistics = () => {
@@ -18,10 +25,10 @@ const Statistics = () => {
   return (
     <StyledStatistics>
       {stats.map((stat) => (
-        <div key={stat.id}>
+        <StyledStatisticCard key={stat.id}>
           <StyledStatValue>{stat.value}</StyledStatValue>
           <StyledStatText>{stat.text}</StyledStatText>
-        </div>
+        </StyledStatisticCard>
       ))}
     </StyledStatistics>
   );

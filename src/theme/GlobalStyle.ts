@@ -38,7 +38,7 @@ const GlobalStyle = createGlobalStyle`
        --semibold-w: 600;
        --bold-w: 700;
        --extra-bold-w: 800;
-       --Black-w: 900
+       --black-w: 900;
 
        /* z-indexes */
        --minimum-z: 0;
@@ -61,7 +61,6 @@ const GlobalStyle = createGlobalStyle`
     position: relative;
     width: 100%;
     height: 100%;
-    overflow: hidden;
     font-family: 'DM Sans';
     background: url(${backgroundImg}) repeat var(--main-bg-color);
     animation: ${frameByFrame} 1s steps(12) infinite;

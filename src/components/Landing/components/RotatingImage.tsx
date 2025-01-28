@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { StyledImage } from "./HeroSection.style";
+import { StyledImage } from "../Landing.style";
 
 const RotatingImage = ({ src, alt }: { src: string; alt: string }) => {
   const [rotation, setRotation] = useState<number>(0);

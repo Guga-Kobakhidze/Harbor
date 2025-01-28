@@ -1,11 +1,7 @@
-import HeroSection from "../../components/HeroSection/HeroSection";
+import HeroSection from "../../components/Landing/Landing";
 
 const MainPage = () => {
-  return (
-    <div>
-      <HeroSection />
-    </div>
-  );
+  return <HeroSection />;
 };
 
 export default MainPage;

@@ -3,4 +3,4 @@ Disallow: /private/
 Disallow: /tmp/
 Disallow: /backup/
 
-Sitemap: https://mosaix-template.webflow.io/contact
+Sitemap: https://harbor-eight.vercel.app/

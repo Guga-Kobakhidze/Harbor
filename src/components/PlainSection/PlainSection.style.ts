@@ -1,14 +1,25 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { pxToRem } from "../../helper";
+import backgroundImg from "../../assets/background.svg";
+import { frameByFrame } from "../../theme/GlobalStyle";
 
-export const StyledPlainBox = styled.div`
+export const StyledPlainBox = styled.div<{ hasbackground?: string | null }>`
   display: flex;
   margin: 0 auto;
   align-items: center;
   flex-direction: column;
   gap: ${pxToRem(150)};
-  background-color: var(--dark-bg-color);
+  background: ${({ hasbackground }) =>
+    hasbackground
+      ? `url(${backgroundImg}) repeat var(--dark-bg-color)`
+      : "var(--dark-bg-color)"};
   padding: ${pxToRem(120)} 0 ${pxToRem(86)};
+
+  ${({ hasbackground }) =>
+    hasbackground &&
+    css`
+      animation: ${frameByFrame} 1s steps(12) infinite;
+    `}
 `;
 
 export const StyledPlainTitle = styled.h1`

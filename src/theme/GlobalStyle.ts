@@ -2,7 +2,7 @@ import { createGlobalStyle, keyframes } from "styled-components";
 import backgroundImg from "../assets/background.svg";
 import { pxToRem } from "../helper";
 
-const frameByFrame = keyframes`
+export const frameByFrame = keyframes`
   from {
     background-position: 0 0;
   }
@@ -19,8 +19,10 @@ const GlobalStyle = createGlobalStyle`
        --main-bg-color: #1b245d;
        --dark-bg-color: #161E4C;
        --button-bg-color: #282083;
+       --button-bg-hover-color: #2a2371;
        --border-color: #4C496F;
        --input-color: #E6E6E6;
+       --input-error-color:rgb(183, 40, 40);
        
        /* font sizes */
        --x-small-size: ${pxToRem(14)};      

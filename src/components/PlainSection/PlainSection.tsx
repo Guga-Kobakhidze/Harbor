@@ -5,11 +5,17 @@ interface PlainSectionProps {
   hasbtn?: boolean;
   onClick?: () => void;
   content: string;
+  hasbackground?: boolean;
 }
 
-const PlainSection = ({ hasbtn, onClick, content }: PlainSectionProps) => {
+const PlainSection = ({
+  hasbtn,
+  onClick,
+  content,
+  hasbackground = false,
+}: PlainSectionProps) => {
   return (
-    <StyledPlainBox>
+    <StyledPlainBox hasbackground={hasbackground ? "true" : null}>
       <StyledPlainTitle>{content}</StyledPlainTitle>
       {hasbtn && <StyledBtn onClick={() => onClick?.()}>Contact us</StyledBtn>}
     </StyledPlainBox>

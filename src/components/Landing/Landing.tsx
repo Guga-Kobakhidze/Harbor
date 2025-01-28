@@ -12,9 +12,11 @@ import {
   StyledCrunchedSection,
 } from "./Landing.style";
 import PlainSection from "../PlainSection/PlainSection";
+import { useScrollTo } from "../../hooks/useScrollTo";
 
 const HeroSection = () => {
   const navigate = useNavigate();
+  const { scrollTo } = useScrollTo();
 
   return (
     <React.Fragment>
@@ -45,7 +47,10 @@ const HeroSection = () => {
       <PlainSection
         hasbtn
         content="Let's Talk"
-        onClick={() => navigate("/contact")}
+        onClick={() => {
+          navigate("/contact");
+          scrollTo();
+        }}
       />
     </React.Fragment>
   );

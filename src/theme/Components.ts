@@ -25,6 +25,11 @@ const StyledBtn = styled.button`
   color: var(--primary-color);
   font-weight: var(--semibold-w);
   font-size: var(--large-size);
+  transition: 0.3s;
+
+  &:hover {
+    background-color: var(--button-bg-hover-color);
+  }
 
   @media (max-width: 1680px) {
     padding: ${pxToRem(20)} ${pxToRem(30)};

@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import PlainSection from "../PlainSection/PlainSection";
 import ContactUsForm from "./ContactUsForm";
-import { StyledFormBox } from "./COntactUs.style";
+import { StyledFormBox } from "./ContactUs.style";
 import { useScrollTo } from "../../hooks/useScrollTo";
 
 const ContactUsPage = () => {

@@ -96,3 +96,12 @@ export const StyledStatText = styled.p`
   margin-top: ${pxToRem(16)};
 `;
 
+export const StyledLetsTalk = styled.div`
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  flex-direction: column;
+  gap: ${pxToRem(150)};
+  background-color: var(--dark-bg-color);
+  padding: ${pxToRem(120)} 0 ${pxToRem(86)};
+`;

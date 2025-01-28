@@ -1,6 +1,6 @@
 import { FieldElementProps } from "../ContactUs.config";
 import { Controller, useFormContext } from "react-hook-form";
-import { StyledHelperText, StyledInput, StyledLabel } from "../COntactUs.style";
+import { StyledHelperText, StyledInput, StyledLabel } from "../ContactUs.style";
 
 const TextFieldElement = ({
   name,

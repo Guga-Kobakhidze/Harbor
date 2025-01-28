@@ -1,6 +1,6 @@
 import { TextAreaElementProps } from "../ContactUs.config";
 import { Controller, useFormContext } from "react-hook-form";
-import { StyledLabel, StyledTextarea } from "../COntactUs.style";
+import { StyledLabel, StyledTextarea } from "../ContactUs.style";
 
 const TextAreaElement = ({
   name,

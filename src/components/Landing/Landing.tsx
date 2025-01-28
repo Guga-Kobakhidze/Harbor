@@ -1,7 +1,9 @@
 import React from "react";
 import Statistics from "./components/Statistics";
 import circleImage from "../../assets/main-circle.png";
+import PlainSection from "../PlainSection/PlainSection";
 import RotatingImage from "./components/RotatingImage";
+import { useScrollTo } from "../../hooks/useScrollTo";
 import { useNavigate } from "react-router-dom";
 import { H1, LargeH1, Span, StyledBtn } from "../../theme/Components";
 import {
@@ -11,8 +13,6 @@ import {
   StyledAboutSection,
   StyledCrunchedSection,
 } from "./Landing.style";
-import PlainSection from "../PlainSection/PlainSection";
-import { useScrollTo } from "../../hooks/useScrollTo";
 
 const HeroSection = () => {
   const navigate = useNavigate();

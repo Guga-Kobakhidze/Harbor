@@ -1,7 +1,9 @@
+import { StyledNavLink } from "../NavBar/NavBar";
+
 const LangToggle = () => {
   return (
     <li>
-      <h1>EN</h1>
+      <StyledNavLink as="h1">EN</StyledNavLink>
     </li>
   );
 };

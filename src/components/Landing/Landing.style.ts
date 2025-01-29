@@ -7,8 +7,7 @@ export const StyledHeroSection = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 60dvh;
-  margin-bottom: 200px;
+  margin: ${pxToRem(126)} auto;
 `;
 
 export const StyledImageBox = styled.div`
@@ -55,7 +54,7 @@ export const StyledContent = styled.div`
 `;
 
 export const StyledAboutSection = styled.div`
-  margin: 0 auto;
+  margin: ${pxToRem(280)} auto 0;
   display: flex;
   flex-direction: column;
   align-items: center;

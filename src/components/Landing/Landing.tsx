@@ -13,10 +13,13 @@ import {
   StyledAboutSection,
   StyledCrunchedSection,
 } from "./Landing.style";
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
   const navigate = useNavigate();
   const { scrollTo } = useScrollTo();
+
+  const MotionH1 = motion.create(LargeH1);
 
   return (
     <React.Fragment>
@@ -25,9 +28,27 @@ const HeroSection = () => {
           <RotatingImage src={circleImage} alt="main-circle" />
         </StyledImageBox>
         <StyledContent>
-          <LargeH1>NAVIGATE</LargeH1>
-          <LargeH1>SUCCESS</LargeH1>
-          <LargeH1>TOGETHER</LargeH1>
+          <MotionH1
+            initial={{ x: -50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+          >
+            NAVIGATE
+          </MotionH1>
+          <MotionH1
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
+          >
+            SUCCESS
+          </MotionH1>
+          <MotionH1
+            initial={{ x: 50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.7, ease: "easeOut" }}
+          >
+            TOGETHER
+          </MotionH1>
         </StyledContent>
       </StyledHeroSection>
       <StyledAboutSection>

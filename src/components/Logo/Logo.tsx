@@ -13,8 +13,14 @@ const Logo = () => {
   return (
     <NavLink to="/">
       <StyledBox>
-        <img src={logoImage} alt="Logo-image" width={60} height={60} />
-        <img src={logoTitle} alt="Logo-image" width={143} height={30} />
+        <picture>
+          <source srcSet={`${logoImage}.svg`} type="image/*" />
+          <img src={logoImage} alt="Logo-image" width={60} height={60} />
+        </picture>
+        <picture>
+          <source srcSet={`${logoTitle}.svg`} type="image/*" />
+          <img src={logoTitle} alt="Logo-image" width={143} height={30} />
+        </picture>
       </StyledBox>
     </NavLink>
   );

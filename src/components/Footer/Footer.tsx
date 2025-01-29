@@ -20,14 +20,14 @@ const Footer = () => {
   return (
     <StyledFooter>
       <StyledContent>
-        <StyledBox gap={45}>
+        <StyledBox $gap={45}>
           <Logo />
-          <Paragraph opacity="0.1">
+          <Paragraph $opacity="0.1">
             Harbor is where businesses dock to exchange ideas, forge alliances,
             and set sail toward mutual success.
           </Paragraph>
         </StyledBox>
-        <StyledBox gap={30}>
+        <StyledBox $gap={30}>
           <FooterSocial
             isblank={true}
             link={googleLink}
@@ -40,7 +40,7 @@ const Footer = () => {
             values={["+995 599 213 218", "+995 597 240 433"]}
           />
         </StyledBox>
-        <StyledBox gap={30}>
+        <StyledBox $gap={30}>
           <FooterSocial
             isblank={true}
             image={linkedinIcon}

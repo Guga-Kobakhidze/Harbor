@@ -34,7 +34,10 @@ const FooterSocial = ({
     <>
       {isnumber ? (
         <StyledSocial>
-          <img src={image} alt={values[0]} />
+          <picture>
+            <source srcSet={`${image}.webp`} type="image/*" />
+            <img src={image} alt={values[0]} />
+          </picture>
           <StyledValues>
             <StyledLink to={`tel:${values[0]}`}>{values[0]}</StyledLink>
             <StyledLink to={`tel:${values[1]}`}>{values[1]}</StyledLink>
@@ -43,10 +46,13 @@ const FooterSocial = ({
       ) : (
         <Link to={link ?? "#"} target={isblank ? "_blank" : "_self"}>
           <StyledSocial>
-            <img src={image} alt={values[0]} />
+            <picture>
+              <source srcSet={`${image}.webp`} type="image/*" />
+              <img src={image} alt={values[0]} />
+            </picture>
             <StyledValues>
-              <Paragraph opacity="1">{values[0]}</Paragraph>
-              {values[1] && <Paragraph opacity="1">{values[1]}</Paragraph>}
+              <Paragraph $opacity="1">{values[0]}</Paragraph>
+              {values[1] && <Paragraph $opacity="1">{values[1]}</Paragraph>}
             </StyledValues>
           </StyledSocial>
         </Link>

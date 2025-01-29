@@ -18,10 +18,10 @@ export const StyledContent = styled.div`
   }
 `;
 
-export const Paragraph = styled.p<{ opacity: string }>`
+export const Paragraph = styled.p<{ $opacity: string }>`
   font-size: var(--medium-size);
   color: var(--primary-color);
-  opacity: ${(props) => props.opacity};
+  opacity: ${({ $opacity }) => $opacity};
   max-width: ${pxToRem(300)};
 `;
 
@@ -31,9 +31,9 @@ export const StyledLink = styled(Link)`
   max-width: ${pxToRem(300)};
 `;
 
-export const StyledBox = styled.div<{ gap: number }>`
+export const StyledBox = styled.div<{ $gap: number }>`
   display: flex;
   flex-direction: column;
   align-items: start;
-  gap: ${(props) => pxToRem(props.gap)};
+  gap: ${({ $gap }) => pxToRem($gap)};
 `;

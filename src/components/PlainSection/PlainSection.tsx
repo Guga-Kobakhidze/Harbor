@@ -15,7 +15,7 @@ const PlainSection = ({
   hasbackground = false,
 }: PlainSectionProps) => {
   return (
-    <StyledPlainBox hasbackground={hasbackground ? "true" : null}>
+    <StyledPlainBox $hasbackground={hasbackground ? "true" : null}>
       <StyledPlainTitle>{content}</StyledPlainTitle>
       {hasbtn && <StyledBtn onClick={() => onClick?.()}>Contact us</StyledBtn>}
     </StyledPlainBox>

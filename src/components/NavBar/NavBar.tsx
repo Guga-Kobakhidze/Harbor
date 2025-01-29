@@ -11,13 +11,11 @@ const StyledList = styled.ul`
 
 const scale = keyframes`
   0%, 100% {
-    width: ${pxToRem(15)};
-    height: ${pxToRem(15)};
+    transform:translate(-50%, -50%) scale(1);
   }
 
   50% {
-    width: ${pxToRem(18)};
-    height: ${pxToRem(18)};
+   transform: translate(-50%, -50%) scale(1.3);
   }
 `;
 
@@ -40,11 +38,16 @@ export const StyledNavLink = styled.div`
     top: 50%;
     transform: translate(-50%, -50%);
     transition: 0.2s ease-in-out;
-    pointer-events: none;
+    /* pointer-events: none; */
   }
 
   &.active {
     color: var(--secondary-color);
+  }
+
+  &.active:hover::before {
+    width: ${pxToRem(15)};
+    height: ${pxToRem(15)};
   }
 
   &:hover::before {

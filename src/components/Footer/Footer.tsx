@@ -45,13 +45,13 @@ const Footer = () => {
             isblank={true}
             image={linkedinIcon}
             values={["Follow us !"]}
-            link={"https://www.linkedin.com"}
+            link="https://www.linkedin.com/company/harbor-georgia"
           />
           <FooterSocial
             isblank={false}
             image={mailIcon}
             values={["info@harbor.ge"]}
-            link={"mailto:info@harbor.ge"}
+            link="mailto:info@harbor.ge"
           />
         </StyledBox>
       </StyledContent>

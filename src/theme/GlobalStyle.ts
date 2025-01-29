@@ -28,9 +28,11 @@ const GlobalStyle = createGlobalStyle`
        --x-small-size: ${pxToRem(14)};      
        --small-size: ${pxToRem(18)};        
        --medium-size: ${pxToRem(20)};      
-       --large-size: ${pxToRem(24)};       
+       --large-size: ${pxToRem(24)};
+       --xs-large-size: ${pxToRem(36)};       
        --x-large-size: ${pxToRem(48)};     
-       --xx-large-size: ${pxToRem(74)};    
+       --xx-large-size: ${pxToRem(74)};  
+       --xx-medium-size: ${pxToRem(120)};
        --xxx-large-size: ${pxToRem(128)};  
        --huge-size: ${pxToRem(200)};
 
@@ -45,9 +47,48 @@ const GlobalStyle = createGlobalStyle`
        /* z-indexes */
        --minimum-z: 0;
        --maximum-z: 999;
+
+       /* line Heights */
+       --xxx-large-line: ${pxToRem(140)};  
+
+       /* paddings / margins */
+       --global-padding: ${pxToRem(117)};
+       --global-margin: 0 auto;
     }
 
+    @media (max-width: 1200px) {
+      :root {
+        --small-size: ${pxToRem(16)};
+        --medium-size: ${pxToRem(18)};
+        --large-size: ${pxToRem(22)};
+        --x-large-size: ${pxToRem(40)};
+        --xx-large-size: ${pxToRem(60)};
+        --xx-medium-size: ${pxToRem(80)};
+        --xxx-large-size: ${pxToRem(88)};
+        --xxx-large-line: ${pxToRem(90)};
+        --global-padding: ${pxToRem(40)};
+      }
+    }
 
+      @media (max-width: 870px) {
+      :root {
+        --large-size: ${pxToRem(18)};
+        --x-large-size: ${pxToRem(30)};
+        --xx-medium-size: ${pxToRem(60)};
+        --xxx-large-size: ${pxToRem(68)};
+        --xxx-large-line: ${pxToRem(80)};
+      }
+    }
+
+      @media (max-width: 600px) {
+      :root {
+        --xx-medium-size: ${pxToRem(40)};
+        --xxx-large-size: ${pxToRem(48)};
+        --xxx-large-line: ${pxToRem(60)};
+        --global-padding: ${pxToRem(16)}
+      }
+    }
+  
 
   *,
   *::before,
@@ -130,3 +171,16 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 export default GlobalStyle;
+
+export const FlexBoxBetween = `
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+export const FlexBoxCenter = `
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+`;

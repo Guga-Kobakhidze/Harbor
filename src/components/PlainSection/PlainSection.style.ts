@@ -1,28 +1,31 @@
 import styled, { css } from "styled-components";
 import { pxToRem } from "../../helper";
 import backgroundImg from "../../assets/background.svg";
-import { frameByFrame } from "../../theme/GlobalStyle";
+import { FlexBoxCenter, frameByFrame } from "../../theme/GlobalStyle";
 
 export const StyledPlainBox = styled.div<{
   $hasbackground?: string | null;
   $gap?: string;
 }>`
-  display: flex;
-  margin: 0 auto;
-  align-items: center;
+  ${FlexBoxCenter};
   flex-direction: column;
-  gap: ${({ $gap }) => $gap || pxToRem(150)};
+  margin: var(--global-margin);
+  gap: ${({ $gap }) => $gap || pxToRem(80)};
   background: ${({ $hasbackground }) =>
     $hasbackground
       ? `url(${backgroundImg}) repeat var(--dark-bg-color)`
       : "var(--dark-bg-color)"};
-  padding: ${pxToRem(120)} 0 ${pxToRem(86)};
+  padding: ${pxToRem(100)} var(--global-padding) ${pxToRem(86)};
 
   ${({ $hasbackground }) =>
     $hasbackground &&
     css`
       animation: ${frameByFrame} 1s steps(12) infinite;
     `}
+
+  @media (max-width: 600px) {
+    gap: ${pxToRem(40)};
+  }
 `;
 
 export const StyledPlainTitle = styled.h1`

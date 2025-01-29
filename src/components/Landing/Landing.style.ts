@@ -1,13 +1,28 @@
 import styled from "styled-components";
 import { pxToRem } from "../../helper";
+import { FlexBoxCenter } from "../../theme/GlobalStyle";
+
+export const Wrapper = styled.div`
+  padding: 0 var(--global-padding);
+`;
 
 export const StyledHeroSection = styled.div`
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  ${FlexBoxCenter};
   width: 100%;
-  margin: ${pxToRem(126)} auto;
+  margin: ${pxToRem(150)} auto;
+
+  @media (max-width: 1200px) {
+    margin: ${pxToRem(200)} auto;
+  }
+
+  @media (max-width: 900px) {
+    margin: ${pxToRem(100)} auto;
+  }
+
+  @media (max-width: 450px) {
+    margin: ${pxToRem(60)} auto;
+  }
 `;
 
 export const StyledImageBox = styled.div`
@@ -15,6 +30,10 @@ export const StyledImageBox = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  @media (max-width: 730px) {
+    width: 60%;
+  }
 `;
 
 export const StyledImage = styled.img`
@@ -22,56 +41,79 @@ export const StyledImage = styled.img`
   user-select: none;
   width: 100%;
   height: 100%;
+  scale: 1.3;
+
+  @media (max-width: 380px) {
+    scale: 1.4;
+  }
 `;
 
 export const StyledContent = styled.div`
-  width: 860px;
-  display: flex;
+  width: 1200px;
+  ${FlexBoxCenter};
   flex-direction: column;
-  align-items: center;
   position: relative;
   z-index: var(--maximum-z);
   letter-spacing: 2px;
 
   h1:first-child {
-    font-size: var(--xx-large-size);
+    font-size: var(--xx-medium-size);
     font-weight: var(--extra-bold-w);
     align-self: start;
+    line-height: var(--xxx-large-line);
   }
 
   h1:nth-of-type(2) {
-    font-size: var(--xx-large-size);
+    font-size: var(--xx-medium-size);
     font-weight: var(--extra-bold-w);
     -webkit-text-stroke: 1px var(--primary-color);
     color: transparent;
+    line-height: var(--xxx-large-line);
   }
 
   h1:nth-of-type(3) {
-    font-size: var(--xx-large-size);
+    font-size: var(--xx-medium-size);
     font-weight: var(--extra-bold-w);
     align-self: end;
+    line-height: var(--xxx-large-line);
   }
 `;
 
 export const StyledAboutSection = styled.div`
-  margin: ${pxToRem(280)} auto 0;
-  display: flex;
+  margin: ${pxToRem(280)} auto ${pxToRem(180)};
+  ${FlexBoxCenter};
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: ${pxToRem(150)};
+  gap: ${pxToRem(60)};
   max-width: ${pxToRem(800)};
-  margin-bottom: ${pxToRem(260)};
+
+  @media (max-width: 900px) {
+    gap: ${pxToRem(50)};
+    margin: ${pxToRem(160)} auto ${pxToRem(60)};
+  }
+
+  @media (max-width: 500px) {
+    gap: ${pxToRem(40)};
+    margin-top: ${pxToRem(120)};
+  }
+
+  @media (max-width: 400px) {
+    gap: ${pxToRem(20)};
+    margin-top: ${pxToRem(100)};
+  }
 `;
 
 export const StyledCrunchedSection = styled.div`
-  display: flex;
+  ${FlexBoxCenter};
   flex-direction: column;
-  text-align: center;
   gap: ${pxToRem(84)};
   max-width: ${pxToRem(800)};
-  margin: 0 auto;
-  margin-bottom: ${pxToRem(260)};
+  margin: var(--global-margin);
+  margin-bottom: ${pxToRem(180)};
+
+  @media (max-width: 900px) {
+    gap: ${pxToRem(40)};
+    margin-bottom: ${pxToRem(60)};
+  }
 `;
 
 export const StyledStatValue = styled.h1`
@@ -96,11 +138,10 @@ export const StyledStatText = styled.p`
 `;
 
 export const StyledLetsTalk = styled.div`
-  display: flex;
-  margin: 0 auto;
-  align-items: center;
+  ${FlexBoxCenter};
   flex-direction: column;
   gap: ${pxToRem(150)};
+  margin: var(--global-margin);
   background-color: var(--dark-bg-color);
   padding: ${pxToRem(120)} 0 ${pxToRem(86)};
 `;

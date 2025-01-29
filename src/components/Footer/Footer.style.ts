@@ -1,20 +1,23 @@
 import styled from "styled-components";
 import { pxToRem } from "../../helper";
 import { Link } from "react-router-dom";
+import { FlexBoxBetween } from "../../theme/GlobalStyle";
 
 export const StyledFooter = styled.footer`
-  padding: ${pxToRem(450)} ${pxToRem(117)} ${pxToRem(50)};
+  padding: ${pxToRem(250)} var(--global-padding) ${pxToRem(50)};
+
+  @media (max-width: 600px) {
+    padding-top: ${pxToRem(100)};
+  }
 `;
 
 export const StyledContent = styled.div`
-  display: flex;
-  align-items: start;
-  justify-content: space-between;
+  ${FlexBoxBetween};
   flex-wrap: wrap;
   gap: ${pxToRem(40)};
 
   @media (max-width: 900px) {
-    justify-content: center;
+    justify-content: start;
   }
 `;
 
@@ -34,6 +37,7 @@ export const StyledLink = styled(Link)`
 export const StyledBox = styled.div<{ $gap: number }>`
   display: flex;
   flex-direction: column;
+  text-align: start;
   align-items: start;
   gap: ${({ $gap }) => pxToRem($gap)};
 `;

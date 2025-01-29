@@ -1,6 +1,7 @@
 import styled, { keyframes } from "styled-components";
 import { pxToRem } from "../../helper";
 import { motion } from "framer-motion";
+import { FlexBoxCenter } from "../../theme/GlobalStyle";
 
 export const MotionLi = motion.create("li");
 export const animation = {
@@ -9,7 +10,7 @@ export const animation = {
 };
 
 export const StyledList = styled.ul`
-  display: flex;
+  ${FlexBoxCenter};
   gap: ${pxToRem(40)};
 `;
 
@@ -25,8 +26,7 @@ export const scale = keyframes`
 
 export const StyledNavLink = styled.div`
   position: relative;
-  display: flex;
-  align-items: center;
+  ${FlexBoxCenter};
   gap: ${pxToRem(8)};
   text-decoration: none;
   color: inherit;

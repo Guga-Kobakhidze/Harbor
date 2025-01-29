@@ -6,13 +6,26 @@ const StyledStatistics = styled.div`
   display: flex;
   justify-content: center;
   gap: ${pxToRem(180)};
+
+  @media (max-width: 1200px) {
+    flex-wrap: wrap;
+    gap: ${pxToRem(100)};
+  }
+
+  @media (max-width: 600px) {
+    gap: ${pxToRem(80)};
+  }
 `;
 
 const StyledStatisticCard = styled.div`
-  max-width: 180px;
+  max-width: ${pxToRem(180)};
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 1200px) {
+    max-width: ${pxToRem(250)};
+  }
 `;
 
 const Statistics = () => {

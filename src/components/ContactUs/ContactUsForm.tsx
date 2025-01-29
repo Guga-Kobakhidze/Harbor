@@ -7,17 +7,32 @@ import { defaultValues, IContactUs } from "./ContactUs.config";
 import { StyledFullWidth, StyledGridForm } from "./ContactUs.style";
 import TextAreaElement from "./element/TextAreaFieldElement";
 import { StyledBtn } from "../../theme/Components";
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
+
+const serviceId = import.meta.env.VITE_API_HARBOR_ID;
+const templateId = import.meta.env.VITE_API_TEMPLATE_ID;
+const publicKey = import.meta.env.VITE_API_PUBLIC_KEY;
 
 const ContactUsForm = () => {
+  const [loading, setLoading] = useState<boolean>(false);
+
   const methods = useForm<IContactUs>({
     resolver: yupResolver(schema),
     defaultValues,
   });
 
-  const { handleSubmit } = methods;
+  const { handleSubmit, reset } = methods;
 
   const onSubmit = (data: IContactUs) => {
-    console.log(data);
+    setLoading(true);
+    emailjs
+      .send(serviceId, templateId, data, publicKey)
+      .catch((error) => console.error(error))
+      .finally(() => {
+        reset();
+        setLoading(false);
+      });
   };
 
   return (
@@ -46,14 +61,14 @@ const ContactUsForm = () => {
         />
         <StyledFullWidth>
           <TextAreaElement
-            label="MORE INFORMATION"
-            name="message"
-            placeholder="Hello, I am looking for Agency to help me out with..."
             rows={10.5}
+            name="message"
+            label="MORE INFORMATION"
+            placeholder="Hello, I am looking for Agency to help me out with..."
           />
         </StyledFullWidth>
         <StyledFullWidth>
-          <StyledBtn style={{ width: "100%" }} type="submit">
+          <StyledBtn disabled={loading} style={{ width: "100%" }} type="submit">
             SUBMIT
           </StyledBtn>
         </StyledFullWidth>

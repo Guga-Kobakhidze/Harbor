@@ -14,6 +14,7 @@ export const StyledFooter = styled.footer`
 export const StyledContent = styled.div`
   ${FlexBoxBetween};
   flex-wrap: wrap;
+  align-items: start;
   gap: ${pxToRem(40)};
 
   @media (max-width: 900px) {

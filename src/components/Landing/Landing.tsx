@@ -1,6 +1,5 @@
 import React from "react";
 import Statistics from "./components/Statistics";
-import circleImage from "../../assets/main-circle.png";
 import PlainSection from "../PlainSection/PlainSection";
 import RotatingImage from "./components/RotatingImage";
 import { motion } from "framer-motion";
@@ -27,7 +26,7 @@ const HeroSection = () => {
       <Wrapper>
         <StyledHeroSection>
           <StyledImageBox>
-            <RotatingImage src={circleImage} alt="main-circle" />
+            <RotatingImage />
           </StyledImageBox>
           <StyledContent>
             <MotionH1

@@ -30,6 +30,7 @@ export const StyledNavLink = styled.div`
   gap: ${pxToRem(8)};
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 
   &::before {
     content: "";
@@ -42,6 +43,7 @@ export const StyledNavLink = styled.div`
     top: 50%;
     transform: translate(-50%, -50%);
     transition: 0.2s ease-in-out;
+    pointer-events: none;
   }
 
   &.active {

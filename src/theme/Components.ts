@@ -27,6 +27,11 @@ const StyledBtn = styled.button`
   font-size: var(--large-size);
   transition: 0.3s;
 
+  &:disabled {
+    background-color: var(--button-bg-hover-color);
+    cursor: not-allowed;
+  }
+
   &:hover {
     background-color: var(--button-bg-hover-color);
   }

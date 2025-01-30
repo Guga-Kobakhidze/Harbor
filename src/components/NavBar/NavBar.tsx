@@ -2,12 +2,15 @@ import LangToggle from "../LangToggle/LangToggle";
 import { NavLink } from "react-router-dom";
 import { animation, MotionLi, StyledList, StyledNavLink } from "./NavBar.style";
 import "boxicons";
+import { useTranslation } from "react-i18next";
 
 const NavBar = () => {
+  const { t } = useTranslation();
+
   const links = [
-    { to: "/", title: "Home", delay: 0.5 },
-    { to: "/about", title: "About", delay: 0.7 },
-    { to: "/contact", title: "Contact", delay: 0.9 },
+    { to: "/", title: t("home"), delay: 0.5 },
+    { to: "/about", title: t("about"), delay: 0.7 },
+    { to: "/contact", title: t("contact"), delay: 0.9 },
   ];
 
   return (

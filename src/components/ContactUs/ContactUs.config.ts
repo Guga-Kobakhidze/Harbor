@@ -1,4 +1,5 @@
 export const defaultValues = {
+  to_name: "Harbor community",
   fullName: "",
   email: "",
   industry: "",
@@ -7,6 +8,8 @@ export const defaultValues = {
 };
 
 export interface IContactUs {
+  [key: string]: unknown;
+  to_name?: string;
   fullName: string;
   email: string;
   industry?: string;

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { pxToRem } from "../helper";
 
 const LargeH1 = styled.h1`
-  font-size: var(--xx-large-size);
+  font-size: var(--huge-size);
   font-weight: var(--extra-bold-w);
 `;
 
@@ -19,7 +19,7 @@ const Span = styled.span`
 `;
 
 const StyledBtn = styled.button`
-  padding: ${pxToRem(30)} ${pxToRem(41)};
+  padding: ${pxToRem(20)} ${pxToRem(30)};
   text-transform: uppercase;
   background-color: var(--button-bg-color);
   color: var(--primary-color);
@@ -27,18 +27,19 @@ const StyledBtn = styled.button`
   font-size: var(--large-size);
   transition: 0.3s;
 
-  &:hover {
+  &:disabled {
     background-color: var(--button-bg-hover-color);
+    cursor: not-allowed;
   }
 
-  @media (max-width: 1680px) {
-    padding: ${pxToRem(20)} ${pxToRem(30)};
+  &:hover {
+    background-color: var(--button-bg-hover-color);
   }
 `;
 
 const MarginAuto = styled.div`
   text-align: center;
-  margin: 0 auto;
+  margin: var(--global-margin);
 `;
 
 export { LargeH1, H1, Span, StyledBtn, MarginAuto };

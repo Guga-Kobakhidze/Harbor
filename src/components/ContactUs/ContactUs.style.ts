@@ -26,13 +26,24 @@ const styles = `outline: none;
   }`;
 
 export const StyledGridForm = styled.div`
+  max-width: 800px;
   display: grid;
+  margin: var(--global-margin);
   grid-template-columns: repeat(2, 1fr);
   gap: ${pxToRem(40)} ${pxToRem(32)};
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+    gap: ${pxToRem(20)};
+  }
 `;
 
 export const StyledFormBox = styled.div`
-  padding: ${pxToRem(200)} ${pxToRem(250)} ${pxToRem(300)};
+  padding: ${pxToRem(100)} var(--global-padding) ${pxToRem(200)};
+
+  @media (max-width: 767px) {
+    padding: ${pxToRem(50)} var(--global-padding) ${pxToRem(80)};
+  }
 `;
 
 export const StyledFullWidth = styled.div`

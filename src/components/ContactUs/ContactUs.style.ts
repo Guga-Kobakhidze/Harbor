@@ -5,7 +5,7 @@ const styles = `outline: none;
   background-color: transparent;
   border: 1px solid var(--input-color);
   color: var(--text-color);
-  padding-left: ${pxToRem(21)};
+  padding: ${pxToRem(21)};
 
   font-size: var(--x-small-size);
   font-weight: var(--regular-w);
@@ -64,7 +64,7 @@ export const StyledInput = styled.input`
 `;
 
 export const StyledTextarea = styled.textarea`
-  padding-top: ${pxToRem(15)};
+  padding: ${pxToRem(15)};
   resize: none !important;
   ${styles}
 `;
@@ -84,4 +84,9 @@ export const StyledHelperText = styled.p`
   left: 10px;
   color: var(--input-error-color);
   text-transform: capitalize;
+
+  @media (max-width: 767px) {
+    left: auto;
+    right: 10px;
+  }
 `;

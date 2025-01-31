@@ -1,10 +1,14 @@
 import { schema } from "./schema";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
-import { StyledBtn } from "../../theme/Components";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { StyledLargeBtn } from "../../theme/Components";
 import { defaultValues, IContactUs } from "./ContactUs.config";
-import { StyledFullWidth, StyledGridForm } from "./ContactUs.style";
+import {
+  StyledButtonBox,
+  StyledFullWidth,
+  StyledGridForm,
+} from "./ContactUs.style";
 import { PUBLIC_KEY, SERVICE_ID, TEMPLATE_ID } from "../../config";
 import emailjs from "@emailjs/browser";
 import FormComponent from "../../provider/FormProvider";
@@ -64,11 +68,11 @@ const ContactUsForm = () => {
             placeholder="Hello, I am looking for Agency to help me out with..."
           />
         </StyledFullWidth>
-        <StyledFullWidth>
-          <StyledBtn disabled={loading} style={{ width: "100%" }} type="submit">
+        <StyledButtonBox>
+          <StyledLargeBtn disabled={loading} type="submit">
             SUBMIT
-          </StyledBtn>
-        </StyledFullWidth>
+          </StyledLargeBtn>
+        </StyledButtonBox>
       </StyledGridForm>
     </FormComponent>
   );

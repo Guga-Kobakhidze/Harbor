@@ -15,10 +15,12 @@ const GlobalStyle = createGlobalStyle`
     :root {
         /* colors */
        --primary-color: #ffffff;
+       --overlay-color:#00000094;
        --secondary-color: #B4B4B46B;
        --main-bg-color: #1b245d;
        --dark-bg-color: #161E4C;
        --button-bg-color: #282083;
+       --sideBar-bg-color: #1e1a49;
        --button-bg-hover-color: #2a2371;
        --border-color: #4C496F;
        --input-color: #E6E6E6;

@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { pxToRem } from "../../helper";
 import { FlexBoxCenter } from "../../theme/GlobalStyle";
 
+
 export const Wrapper = styled.div`
   padding: 0 var(--global-padding);
 `;

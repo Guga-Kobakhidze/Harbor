@@ -50,6 +50,14 @@ export const StyledFullWidth = styled.div`
   grid-column: 1 / -1;
 `;
 
+export const StyledButtonBox = styled.div`
+  grid-column: 1 / -1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+`;
+
 export const StyledInput = styled.input`
   height: ${pxToRem(55)};
   ${styles}

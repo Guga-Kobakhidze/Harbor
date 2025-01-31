@@ -1,8 +1,9 @@
 import Logo from "../Logo/Logo";
+import NavBar from "./NavBar/NavBar";
 import styled from "styled-components";
-import NavBar from "../NavBar/NavBar";
-import { pxToRem } from "../../helper";
+import SideBar from "./SideBar/SideBar";
 import useMediaQuery from "../../hooks/useMediaQuery";
+import { pxToRem } from "../../helper";
 import { FlexBoxBetween } from "../../theme/GlobalStyle";
 
 export const StyledHeader = styled.header`
@@ -25,7 +26,7 @@ const Header = () => {
   return (
     <StyledHeader as="header">
       <Logo />
-      {isSmall ? <i className="bx bx-menu"></i> : <NavBar />}
+      {isSmall ? <SideBar /> : <NavBar />}
     </StyledHeader>
   );
 };

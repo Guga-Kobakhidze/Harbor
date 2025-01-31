@@ -1,9 +1,7 @@
 import styled, { keyframes } from "styled-components";
-import { pxToRem } from "../../helper";
-import { motion } from "framer-motion";
-import { FlexBoxCenter } from "../../theme/GlobalStyle";
+import { FlexBoxCenter } from "../../../theme/GlobalStyle";
+import { pxToRem } from "../../../helper";
 
-export const MotionLi = motion.create("li");
 export const animation = {
   initial: { y: -40, opacity: 0 },
   animate: { y: 0, opacity: 1 },

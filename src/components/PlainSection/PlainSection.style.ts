@@ -28,7 +28,7 @@ export const StyledPlainBox = styled.div<{
   }
 `;
 
-export const StyledPlainTitle = styled.h1`
+export const StyledPlainTitle = styled.div`
   font-family: "DM Sans";
   font-size: var(--xxx-large-size);
   font-weight: var(--black-w);

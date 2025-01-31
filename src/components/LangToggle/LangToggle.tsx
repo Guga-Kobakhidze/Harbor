@@ -1,15 +1,31 @@
+import React from "react";
 import useLanguage from "../../hooks/useLanguage";
-import { animation, MotionLi, StyledNavLink } from "../NavBar/NavBar.style";
+import useMediaQuery from "../../hooks/useMediaQuery";
+import { MotionLi } from "../../theme/Components";
+import { animation, StyledNavLink } from "../Header/NavBar/NavBar.style";
 
 const LangToggle = () => {
   const { lang, langToggle } = useLanguage();
+  const { isSmall } = useMediaQuery(900);
+
+  const Language = lang === "en" ? "KA" : "EN";
 
   return (
-    <MotionLi {...animation} transition={{ duration: 0.5, delay: 1.1 }}>
-      <StyledNavLink as="button" onClick={langToggle}>
-        {lang === "en" ? "KA" : "EN"}
-      </StyledNavLink>
-    </MotionLi>
+    <React.Fragment>
+      {isSmall ? (
+        <li>
+          <StyledNavLink as="a" onClick={langToggle}>
+            {Language}
+          </StyledNavLink>
+        </li>
+      ) : (
+        <MotionLi {...animation} transition={{ duration: 0.5, delay: 1.1 }}>
+          <StyledNavLink as="button" onClick={langToggle}>
+            {Language}
+          </StyledNavLink>
+        </MotionLi>
+      )}
+    </React.Fragment>
   );
 };
 

@@ -2,10 +2,8 @@ import React from "react";
 import Statistics from "./components/Statistics";
 import PlainSection from "../PlainSection/PlainSection";
 import RotatingImage from "./components/RotatingImage";
-import { motion } from "framer-motion";
-import { useScrollTo } from "../../hooks/useScrollTo";
 import { useNavigate } from "react-router-dom";
-import { H1, LargeH1, Span, StyledBtn } from "../../theme/Components";
+import { H1, MotionH1, Span, StyledBtn } from "../../theme/Components";
 import {
   StyledContent,
   StyledImageBox,
@@ -17,9 +15,6 @@ import {
 
 const HeroSection = () => {
   const navigate = useNavigate();
-  const { scrollTo } = useScrollTo();
-
-  const MotionH1 = motion.create(LargeH1);
 
   return (
     <React.Fragment>
@@ -70,10 +65,7 @@ const HeroSection = () => {
       <PlainSection
         hasbtn
         content="Let's Talk"
-        onClick={() => {
-          navigate("/contact");
-          scrollTo();
-        }}
+        onClick={() => navigate("/contact")}
       />
     </React.Fragment>
   );

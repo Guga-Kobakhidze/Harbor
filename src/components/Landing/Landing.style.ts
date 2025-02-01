@@ -61,7 +61,7 @@ export const StyledContent = styled.div<{ $isgeo: string | null }>`
     font-weight: var(--extra-bold-w);
     align-self: start;
     line-height: var(--xxx-large-line);
-    padding-left: ${({ $isgeo }) => ($isgeo ? "120px" : "")};
+    padding-left: ${({ $isgeo }) => ($isgeo ? "60px" : "")};
 
     @media (max-width: 1200px) {
       padding-left: 0;

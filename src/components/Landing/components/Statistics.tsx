@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 const StyledStatistics = styled.div`
   display: flex;
   justify-content: center;
-  gap: ${pxToRem(180)};
+  gap: ${pxToRem(200)};
 
   @media (max-width: 1200px) {
     flex-wrap: wrap;

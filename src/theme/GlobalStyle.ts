@@ -15,7 +15,8 @@ const GlobalStyle = createGlobalStyle`
     :root {
         /* colors */
        --primary-color: #ffffff;
-       --overlay-color:#00000094;
+       --dark-color: #000000;
+       --overlay-color: #00000094;
        --secondary-color: #B4B4B46B;
        --main-bg-color: #1b245d;
        --dark-bg-color: #161E4C;

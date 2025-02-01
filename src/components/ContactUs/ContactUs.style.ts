@@ -88,6 +88,6 @@ export const StyledHelperText = styled.div`
   @media (max-width: 767px) {
     left: auto;
     right: 10px;
-    font-size: 12px;
+    font-size: 10px;
   }
 `;

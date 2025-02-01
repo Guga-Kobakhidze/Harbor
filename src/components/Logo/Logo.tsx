@@ -30,11 +30,11 @@ const Logo = () => {
       <StyledBox>
         <picture>
           <source srcSet={`${logoImage}.svg`} type="image/*" />
-          <img src={logoImage} alt="Logo-image" />
+          <img src={logoImage} alt="Logo-image" width={52} height={52} />
         </picture>
         <picture>
           <source srcSet={`${logoTitle}.svg`} type="image/*" />
-          <img src={logoTitle} alt="Logo-title" />
+          <img src={logoTitle} alt="Logo-title" width={120} height={80} />
         </picture>
       </StyledBox>
     </NavLink>

@@ -58,10 +58,10 @@ const HeroSection = () => {
         </StyledHeroSection>
         <StyledAboutSection>
           <MotionDescription
-            whileInView={{ x: 0, opacity: 1 }}
-            initial={{ x: 50, opacity: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            viewport={{ once: true }}
+            whileInView={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: false }}
           >
             {t("about.description")}
           </MotionDescription>
@@ -69,10 +69,10 @@ const HeroSection = () => {
         </StyledAboutSection>
         <StyledCrunchedSection>
           <MotionDescription
-            whileInView={{ x: 0, opacity: 1 }}
-            initial={{ x: -50, opacity: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            viewport={{ once: true }}
+            whileInView={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: false }}
           >
             {t("crunched.description")} <Span>{t("crunched.span")}</Span>
           </MotionDescription>

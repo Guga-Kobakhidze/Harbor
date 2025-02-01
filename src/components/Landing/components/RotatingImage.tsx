@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { StyledImage } from "../Landing.style";
-import circleImage from "../../../assets/main-circle.png";
+import circleImagePng from "../../../assets/main-circle.png";
 
 const RotatingImage = () => {
   const [rotation, setRotation] = useState<number>(0);
@@ -18,7 +18,7 @@ const RotatingImage = () => {
 
   return (
     <StyledImage
-      src={circleImage}
+      src={circleImagePng}
       alt="circle-image"
       style={{ transform: `rotate(${rotation}deg)` }}
     />

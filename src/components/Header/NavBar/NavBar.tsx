@@ -53,7 +53,7 @@ const NavBar = ({ onClose }: { onClose?: () => void }) => {
           )}
         </React.Fragment>
       ))}
-      <LangToggle />
+      <LangToggle onClose={onClose} />
     </StyledList>
   );
 };

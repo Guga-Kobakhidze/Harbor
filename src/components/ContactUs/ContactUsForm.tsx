@@ -14,12 +14,14 @@ import emailjs from "@emailjs/browser";
 import FormComponent from "../../provider/FormProvider";
 import TextAreaElement from "./element/TextAreaFieldElement";
 import TextFieldElement from "./element/TextFieldElement";
+import { useTranslation } from "react-i18next";
 
 const ContactUsForm = () => {
+  const { t } = useTranslation();
   const [loading, setLoading] = useState<boolean>(false);
 
   const methods = useForm<IContactUs>({
-    resolver: yupResolver(schema),
+    resolver: yupResolver(schema(t)),
     defaultValues,
   });
 
@@ -41,36 +43,36 @@ const ContactUsForm = () => {
       <StyledGridForm>
         <TextFieldElement
           name="fullName"
-          label="Full Name"
-          placeholder="Name and Surname"
+          label={t("form.fullName")}
+          placeholder={t("form.fullName.placeholder")}
         />
         <TextFieldElement
           name="email"
-          label="Email Address"
-          placeholder="mail@company.com"
+          label={t("form.email")}
+          placeholder={t("form.email.placeholder")}
         />
         <TextFieldElement
-          label="Industry"
           name="industry"
-          placeholder="Write your company's industry"
+          label={t("form.industry")}
+          placeholder={t("form.industry.placeholder")}
         />
         <TextFieldElement
           name="number"
           type="number"
-          label="CONTACT NUMBER"
-          placeholder="Prone Number"
+          label={t("form.number")}
+          placeholder={t("form.number.placeholder")}
         />
         <StyledFullWidth>
           <TextAreaElement
             rows={10.5}
             name="message"
-            label="MORE INFORMATION"
-            placeholder="Hello, I am looking for Agency to help me out with..."
+            label={t("form.more.info")}
+            placeholder={t("form.more.info.placeholder")}
           />
         </StyledFullWidth>
         <StyledButtonBox>
           <StyledLargeBtn disabled={loading} type="submit">
-            SUBMIT
+            {t("form.submit")}
           </StyledLargeBtn>
         </StyledButtonBox>
       </StyledGridForm>

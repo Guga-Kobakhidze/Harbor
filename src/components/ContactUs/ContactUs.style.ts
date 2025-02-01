@@ -78,7 +78,7 @@ export const StyledLabel = styled.label`
   position: relative;
 `;
 
-export const StyledHelperText = styled.p`
+export const StyledHelperText = styled.div`
   position: absolute;
   bottom: -25px;
   left: 10px;
@@ -88,5 +88,6 @@ export const StyledHelperText = styled.p`
   @media (max-width: 767px) {
     left: auto;
     right: 10px;
+    font-size: 12px;
   }
 `;

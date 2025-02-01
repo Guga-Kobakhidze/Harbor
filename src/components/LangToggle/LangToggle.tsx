@@ -6,7 +6,7 @@ import { animation, StyledNavLink } from "../Header/NavBar/NavBar.style";
 
 const LangToggle = () => {
   const { lang, langToggle } = useLanguage();
-  const { isSmall } = useMediaQuery(900);
+  const { isSmall } = useMediaQuery(1200);
 
   const Language = lang === "en" ? "KA" : "EN";
 

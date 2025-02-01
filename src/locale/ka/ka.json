@@ -1,5 +1,40 @@
 {
-  "home": "Home",
-  "about": "About",
-  "contact": "Contact"
+  "home": "მთავარი",
+  "about": "ჩვენ შესახებ",
+  "contact": "კონტაქტი",
+  "letsTalk": "ვისაუბროთ",
+  "contact.us": "კონტაქტი",
+  "navigate": "ერთად",
+  "success": "მივაღწიოთ",
+  "together": "წარმატებას",
+  "about.description": "Harbor არის ადგილი, სადაც ბიზნესები იკრიბებიან იდეების გასაზიარებლად, აყალიბებენ ალიანსებს და ერთობლივი წარმატებისკენ მიემართებიან",
+  "about.us": "ჩვენს შესახებ",
+  "crunched.description": "ჩვენ გავაანალიზეთ მონაცემები და გვაქვს შთამბეჭდავი ციფრები,",
+  "crunched.span": "რომლებიც ღირს გასათვალისწინებლად",
+  "active.company": "აქტიური კომპანიები ქსელში",
+  "closed.deals": "დასრულებული გარიგებები",
+  "outreach.efforts": "პასუხების სიჩქარე",
+  "coming.soon": "მალე დაემატება",
+  "go.back": "უკან გასვლა",
+
+  "footer.location": "45 ვაჟა ფშაველას გამზირი",
+  "footer.country": "თბილისი, საქართველო 0177",
+  "footer.follow": "გამოგვყევი !",
+
+  "form.contact": "კონტაქტი",
+  "form.fullName": "სრული სახელი",
+  "form.fullName.placeholder": "სახელი და გვარი",
+  "form.email": "ელ-ფოსტის მისამართი",
+  "form.email.placeholder": "mail@company.com",
+  "form.industry": "ინდუსტრია",
+  "form.industry.placeholder": "თქვენი კომპანიის ინდუსტრია",
+  "form.number": "საკონტაქტო ნომერი",
+  "form.number.placeholder": "საკონტაქტო ნომერი",
+  "form.more.info": "მეტი ინფორმაცია",
+  "form.more.info.placeholder": "გამარჯობა, ვეძებ სააგენტოს, რომელიც დამეხმარება...",
+  "form.submit": "გაგზავნა",
+
+  "form.fullName.required": "სახელი სავალდებულოა",
+  "form.email.notValid": "ელ-ფოსტის მისამართი არასწორია",
+  "form.email.required": "ელ-ფოსტა სავალდებულოა"
 }

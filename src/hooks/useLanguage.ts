@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { getSelectedLanguage, setSelectedLanguage } from "../utils";
 
@@ -9,8 +9,6 @@ const useLanguage = () => {
     selectedLang: "en",
   }).selectedLang;
 
-  const [lang, setLang] = useState<string>(() => storedLang);
-
   useEffect(() => {
     i18n.changeLanguage(storedLang);
   }, [storedLang, i18n]);
@@ -18,12 +16,11 @@ const useLanguage = () => {
   const langToggle = () => {
     const newLanguage = i18n.language === "en" ? "ka" : "en";
 
-    setLang(newLanguage);
     setSelectedLanguage(newLanguage);
     i18n.changeLanguage(newLanguage);
   };
 
-  return { langToggle, lang };
+  return { lang: i18n.language, langToggle };
 };
 
 export default useLanguage;

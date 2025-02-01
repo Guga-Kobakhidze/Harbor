@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { StyledImage } from "../Landing.style";
 import circleImagePng from "../../../assets/main-circle.png";
+import circleImageWebp from "../../../assets/main-circle.webp";
 
 const RotatingImage = () => {
   const [rotation, setRotation] = useState<number>(0);
@@ -17,11 +18,15 @@ const RotatingImage = () => {
   }, []);
 
   return (
-    <StyledImage
-      src={circleImagePng}
-      alt="circle-image"
-      style={{ transform: `rotate(${rotation}deg)` }}
-    />
+    <picture>
+      <source srcSet={circleImageWebp} type="image/webp" />
+      <source srcSet={circleImagePng} type="image/png" />
+      <StyledImage
+        src={circleImagePng}
+        alt="circle-image"
+        style={{ transform: `rotate(${rotation}deg)` }}
+      />
+    </picture>
   );
 };
 

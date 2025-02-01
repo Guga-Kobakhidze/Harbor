@@ -4,23 +4,28 @@ import useMediaQuery from "../../hooks/useMediaQuery";
 import { MotionLi } from "../../theme/Components";
 import { animation, StyledNavLink } from "../Header/NavBar/NavBar.style";
 
-const LangToggle = () => {
+const LangToggle = ({ onClose }: { onClose?: () => void }) => {
   const { lang, langToggle } = useLanguage();
   const { isSmall } = useMediaQuery(1200);
 
   const Language = lang === "en" ? "KA" : "EN";
 
+  const onClick = () => {
+    onClose?.();
+    langToggle();
+  };
+
   return (
     <React.Fragment>
       {isSmall ? (
-        <li>
-          <StyledNavLink as="a" onClick={langToggle}>
+        <React.Fragment>
+          <StyledNavLink as="button" onClick={onClick}>
             {Language}
           </StyledNavLink>
-        </li>
+        </React.Fragment>
       ) : (
         <MotionLi {...animation} transition={{ duration: 0.5, delay: 1.1 }}>
-          <StyledNavLink as="button" onClick={langToggle}>
+          <StyledNavLink as="button" onClick={onClick}>
             {Language}
           </StyledNavLink>
         </MotionLi>

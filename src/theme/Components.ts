@@ -23,6 +23,7 @@ const H1 = styled.div`
   font-size: var(--x-large-size);
   font-weight: var(--medium-w);
   color: var(--primary-color);
+  opacity: 0;
 `;
 
 const Span = styled.span`

@@ -86,3 +86,7 @@ export const StyledNavLink = styled.div`
     opacity: 0;
   }
 `;
+
+export const StyledLi = styled.li`
+  width: 100%;
+`;

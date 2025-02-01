@@ -14,6 +14,7 @@ const Styled404 = styled.div`
 `;
 
 const StyledH1 = styled.h1`
+  max-width: 80%;
   font-size: var(--xx-medium-size);
   font-weight: var(--extra-bold-w);
   -webkit-text-stroke: 1px var(--primary-color);
@@ -28,7 +29,7 @@ const PageNotFound = () => {
 
   return (
     <Styled404>
-      <StyledH1>{t("coming.soon")}</StyledH1>
+      <StyledH1>{t("page.not.found")}</StyledH1>
       <StyledBtn onClick={() => navigate("/")}>{t("go.back")}</StyledBtn>
     </Styled404>
   );

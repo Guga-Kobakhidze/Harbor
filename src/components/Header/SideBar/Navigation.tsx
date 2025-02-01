@@ -1,28 +1,18 @@
-import { useEffect, useRef } from "react";
-import { Overlay, StyledBtn, StyledSideBar } from "../Header.style";
 import NavBar from "../NavBar/NavBar";
+import useOutsideClick from "../../../hooks/useOutsideClick";
+import { Overlay, StyledBtn, StyledSideBar } from "../Header.style";
 
 interface NavigationProps {
   onClose: () => void;
 }
 
 const Navigation = ({ onClose }: NavigationProps) => {
-  const currentRef = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      if (currentRef.current && !currentRef.current.contains(e.target as Node))
-        onClose();
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, [onClose]);
+  const ref = useOutsideClick({ handler: onClose });
 
   return (
     <Overlay>
       <StyledSideBar
-        ref={currentRef}
+        ref={ref}
         initial={{ x: "100%" }}
         animate={{ x: 0 }}
         exit={{ x: "100%" }}

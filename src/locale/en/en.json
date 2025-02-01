@@ -16,6 +16,7 @@
   "outreach.efforts": "response rate to outreach efforts",
   "coming.soon": "coming soon",
   "go.back": "Go Back",
+  "page.not.found": "404 Page Not Found",
 
   "footer.location": "45 Vazha Pshavela Ave.",
   "footer.country": "Tbilisi, Georgia 0177",
@@ -36,5 +37,11 @@
 
   "form.fullName.required": "Full Name is required",
   "form.email.notValid": "Email is not correctly filled",
-  "form.email.required": "Email address is required"
+  "form.email.required": "Email address is required",
+
+  "form.submit.success": "Success",
+  "form.submit.failed": "Failed",
+  "form.success.message": "Your Message has been sent",
+  "form.failed.message": "Your message has not been sent",
+  "form.modal.close": "Close"
 }

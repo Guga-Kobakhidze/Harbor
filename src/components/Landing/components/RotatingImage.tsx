@@ -9,7 +9,6 @@ const RotatingImage = () => {
     const interval = setInterval(() => {
       setRotation((prevRotation) => {
         const newRotation = (prevRotation + 0.3) % 360;
-        localStorage.setItem("imageRotation", newRotation.toString());
         return newRotation;
       });
     }, 12);

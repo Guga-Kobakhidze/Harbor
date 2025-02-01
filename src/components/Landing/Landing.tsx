@@ -1,19 +1,28 @@
 import React from "react";
 import Statistics from "./components/Statistics";
+import useLanguage from "../../hooks/useLanguage";
 import PlainSection from "../PlainSection/PlainSection";
 import RotatingImage from "./components/RotatingImage";
 import { useNavigate } from "react-router-dom";
-import { H1, MotionH1, Span, StyledBtn } from "../../theme/Components";
+import { useTranslation } from "react-i18next";
 import {
+  Span,
+  MotionH1,
+  StyledBtn,
+  MotionDescription,
+} from "../../theme/Components";
+import {
+  Wrapper,
   StyledContent,
   StyledImageBox,
   StyledHeroSection,
   StyledAboutSection,
   StyledCrunchedSection,
-  Wrapper,
 } from "./Landing.style";
 
 const HeroSection = () => {
+  const { t } = useTranslation();
+  const { lang } = useLanguage();
   const navigate = useNavigate();
 
   return (
@@ -23,48 +32,56 @@ const HeroSection = () => {
           <StyledImageBox>
             <RotatingImage />
           </StyledImageBox>
-          <StyledContent>
+          <StyledContent $isgeo={lang === "ka" ? "true" : null}>
             <MotionH1
               initial={{ x: -50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
             >
-              NAVIGATE
+              {t("navigate")}
             </MotionH1>
             <MotionH1
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
             >
-              SUCCESS
+              {t("success")}
             </MotionH1>
             <MotionH1
               initial={{ x: 50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.7, ease: "easeOut" }}
             >
-              TOGETHER
+              {t("together")}
             </MotionH1>
           </StyledContent>
         </StyledHeroSection>
         <StyledAboutSection>
-          <H1>
-            Harbor is where businesses dock to exchange ideas, forge alliances,
-            and set sail toward mutual success.
-          </H1>
-          <StyledBtn onClick={() => navigate("#")}>ABOUT US</StyledBtn>
+          <MotionDescription
+            whileInView={{ x: 0, opacity: 1 }}
+            initial={{ x: 50, opacity: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
+            {t("about.description")}
+          </MotionDescription>
+          <StyledBtn onClick={() => navigate("#")}>{t("about.us")}</StyledBtn>
         </StyledAboutSection>
         <StyledCrunchedSection>
-          <H1>
-            We've crunched the numbers and have some{" "}
-            <Span>impressive figures you'll want to consider</Span>
-          </H1>
+          <MotionDescription
+            whileInView={{ x: 0, opacity: 1 }}
+            initial={{ x: -50, opacity: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
+            {t("crunched.description")} <Span>{t("crunched.span")}</Span>
+          </MotionDescription>
           <Statistics />
         </StyledCrunchedSection>
       </Wrapper>
       <PlainSection
         hasbtn
-        content="Let's Talk"
+        content={t("letsTalk")}
         onClick={() => navigate("/contact")}
       />
     </React.Fragment>

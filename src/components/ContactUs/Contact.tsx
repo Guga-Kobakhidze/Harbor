@@ -2,10 +2,12 @@ import { useCallback, useEffect, useRef } from "react";
 import PlainSection from "../PlainSection/PlainSection";
 import ContactUsForm from "./ContactUsForm";
 import { StyledFormBox } from "./ContactUs.style";
+import { useTranslation } from "react-i18next";
 
 const behavior: ScrollBehavior = "smooth";
 
 const ContactUsPage = () => {
+  const { t } = useTranslation();
   const scrollToRef = useRef<HTMLDivElement>(null);
 
   const scrollTo = useCallback(() => {
@@ -18,16 +20,16 @@ const ContactUsPage = () => {
 
   return (
     <div>
-      <PlainSection once={false} hasbackground content="CONTACT" />
+      <PlainSection once={false} hasbackground content={t("form.contact")} />
       <StyledFormBox ref={scrollToRef}>
         <ContactUsForm />
       </StyledFormBox>
       <PlainSection
         hasbtn
-        once={false}
+        once={true}
         hasbackground
         onClick={scrollTo}
-        content="Let's Talk"
+        content={t("letsTalk")}
       />
     </div>
   );

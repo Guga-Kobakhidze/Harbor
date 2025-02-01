@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { pxToRem } from "../../helper";
 import { FlexBoxCenter } from "../../theme/GlobalStyle";
 
-
 export const Wrapper = styled.div`
   padding: 0 var(--global-padding);
 `;
@@ -49,7 +48,7 @@ export const StyledImage = styled.img`
   }
 `;
 
-export const StyledContent = styled.div`
+export const StyledContent = styled.div<{ $isgeo: string | null }>`
   width: 1200px;
   ${FlexBoxCenter};
   flex-direction: column;
@@ -62,6 +61,11 @@ export const StyledContent = styled.div`
     font-weight: var(--extra-bold-w);
     align-self: start;
     line-height: var(--xxx-large-line);
+    padding-left: ${({ $isgeo }) => ($isgeo ? "120px" : "")};
+
+    @media (max-width: 1200px) {
+      padding-left: 0;
+    }
   }
 
   h1:nth-of-type(2) {
@@ -85,7 +89,7 @@ export const StyledAboutSection = styled.div`
   ${FlexBoxCenter};
   flex-direction: column;
   gap: ${pxToRem(60)};
-  max-width: ${pxToRem(800)};
+  max-width: ${pxToRem(900)};
 
   @media (max-width: 900px) {
     gap: ${pxToRem(50)};
@@ -107,7 +111,7 @@ export const StyledCrunchedSection = styled.div`
   ${FlexBoxCenter};
   flex-direction: column;
   gap: ${pxToRem(84)};
-  max-width: ${pxToRem(800)};
+  max-width: ${pxToRem(900)};
   margin: var(--global-margin);
   margin-bottom: ${pxToRem(180)};
 
@@ -129,7 +133,7 @@ export const StyledStatValue = styled.h1`
   user-select: none;
 `;
 
-export const StyledStatText = styled.p`
+export const StyledStatText = styled.div`
   font-family: "Snippet";
   font-size: var(--medium-size);
   font-weight: var(--regular-w);

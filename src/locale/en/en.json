@@ -1,5 +1,40 @@
 {
   "home": "Home",
   "about": "About",
-  "contact": "Contact"
+  "contact": "Contact",
+  "letsTalk": "Let's Talk",
+  "contact.us": "Contact Us",
+  "navigate": "Navigate",
+  "success": "Success",
+  "together": "Together",
+  "about.description": "Harbor is where businesses dock to exchange ideas, forge alliances, and set sail toward mutual success.",
+  "about.us": "About Us",
+  "crunched.description": "We've crunched the numbers and have some",
+  "crunched.span": "impressive figures you'll want to consider",
+  "active.company": "Active companies in network",
+  "closed.deals": "Closed deals",
+  "outreach.efforts": "response rate to outreach efforts",
+  "coming.soon": "coming soon",
+  "go.back": "Go Back",
+
+  "footer.location": "45 Vazha Pshavela Ave.",
+  "footer.country": "Tbilisi, Georgia 0177",
+  "footer.follow": "Follow us !",
+
+  "form.contact": "CONTACT",
+  "form.fullName": "Full Name",
+  "form.fullName.placeholder": "Name and Surname",
+  "form.email": "Email Address",
+  "form.email.placeholder": "mail@company.com",
+  "form.industry": "Industry",
+  "form.industry.placeholder": "Write your company's industry",
+  "form.number": "Contact Number",
+  "form.number.placeholder": "Phone Number",
+  "form.more.info": "More Information",
+  "form.more.info.placeholder": "Hello, I am looking for Agency to help me out with...",
+  "form.submit": "Submit",
+
+  "form.fullName.required": "Full Name is required",
+  "form.email.notValid": "Email is not correctly filled",
+  "form.email.required": "Email address is required"
 }

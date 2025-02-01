@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { pxToRem } from "../../../helper";
 import { StyledStatText, StyledStatValue } from "../Landing.style";
+import AnimatedText from "../../AnimatedText/AnimatedText";
+import { useTranslation } from "react-i18next";
 
 const StyledStatistics = styled.div`
   display: flex;
@@ -29,10 +31,11 @@ const StyledStatisticCard = styled.div`
 `;
 
 const Statistics = () => {
+  const { t } = useTranslation();
   const stats = [
-    { value: "100+", text: "Active companies in network", id: 1 },
-    { value: "55", text: "Closed deals", id: 2 },
-    { value: "185K", text: "Companies saved", id: 3 },
+    { value: "100+", text: t("active.company"), id: 1 },
+    { value: "55", text: t("closed.deals"), id: 2 },
+    { value: "75%", text: t("outreach.efforts"), id: 3 },
   ];
 
   return (
@@ -40,7 +43,9 @@ const Statistics = () => {
       {stats.map((stat) => (
         <StyledStatisticCard key={stat.id}>
           <StyledStatValue>{stat.value}</StyledStatValue>
-          <StyledStatText>{stat.text}</StyledStatText>
+          <StyledStatText>
+            <AnimatedText text={stat.text} once={true} duration={0.05} />
+          </StyledStatText>
         </StyledStatisticCard>
       ))}
     </StyledStatistics>

@@ -12,8 +12,10 @@ import phoneIcon from "../../assets/phone.svg";
 import linkedinIcon from "../../assets/linkedin.svg";
 import { generateGoogleLink } from "../../helper";
 import useMediaQuery from "../../hooks/useMediaQuery";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
   const { isSmall } = useMediaQuery(900);
   const googleLink = generateGoogleLink(
     "45 Vazha Pshavela Ave. Tbilisi, Geeorgia 0177"
@@ -24,17 +26,14 @@ const Footer = () => {
       <StyledContent>
         <StyledBox $gap={isSmall ? 20 : 45}>
           <Logo />
-          <Paragraph $opacity="0.1">
-            Harbor is where businesses dock to exchange ideas, forge alliances,
-            and set sail toward mutual success.
-          </Paragraph>
+          <Paragraph $opacity="0.1">{t("about.description")}</Paragraph>
         </StyledBox>
         <StyledBox $gap={isSmall ? 10 : 30}>
           <FooterSocial
             isblank={true}
             link={googleLink}
             image={locationIcon}
-            values={["45 Vazha Pshavela Ave.", "Tbilisi, Geeorgia 0177"]}
+            values={[t("footer.location"), t("footer.country")]}
           />
           <FooterSocial
             isnumber={true}
@@ -46,7 +45,7 @@ const Footer = () => {
           <FooterSocial
             isblank={true}
             image={linkedinIcon}
-            values={["Follow us !"]}
+            values={[t("footer.follow")]}
             link="https://www.linkedin.com/company/harbor-georgia"
           />
           <FooterSocial

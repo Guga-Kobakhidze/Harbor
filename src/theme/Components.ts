@@ -16,6 +16,7 @@ const buttonStyles = `
 const LargeH1 = styled.h1`
   font-size: var(--huge-size);
   font-weight: var(--extra-bold-w);
+  text-transform: uppercase;
 `;
 
 const H1 = styled.div`
@@ -67,6 +68,7 @@ const MarginAuto = styled.div`
 `;
 
 export const MotionH1 = motion.create(LargeH1);
+export const MotionDescription = motion.create(H1);
 export const MotionLi = motion.create("li");
 
 export { LargeH1, H1, Span, StyledBtn, MarginAuto };

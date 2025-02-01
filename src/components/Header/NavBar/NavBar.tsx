@@ -27,7 +27,7 @@ const NavLinks = ({ to, title }: NavLinsType) => {
 
 const NavBar = ({ onClose }: { onClose?: () => void }) => {
   const { t } = useTranslation();
-  const { isSmall } = useMediaQuery(900);
+  const { isSmall } = useMediaQuery(1200);
 
   const links = [
     { to: "/", title: t("home"), delay: 0.5 },

@@ -10,7 +10,7 @@ const SideBar = () => {
 
   return (
     <React.Fragment>
-      <StyledBtn $absolute={false} onClick={onOpen}>
+      <StyledBtn aria-label="burger-menu" $absolute={false} onClick={onOpen}>
         <i className="bx bx-menu"></i>
       </StyledBtn>
       {open && <Navigation onClose={onClose} />}

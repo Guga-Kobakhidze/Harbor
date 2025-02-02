@@ -1,6 +1,7 @@
 User-agent: *
+Crawl-delay: 5  
 Disallow: /private/
 Disallow: /tmp/
 Disallow: /backup/
 
-Sitemap: https://harbor-eight.vercel.app/
+Sitemap: https://harbor.ge/
